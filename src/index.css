@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+@media (min-width: 768px) {
+  html, body {
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+}
+
+/* Hide default cursor on desktop pointer devices so custom aesthetic cursor is the only one */
+@media (pointer: fine) {
+  html, body, button, a, [role="button"], input, textarea, select, label, .cursor-pointer {
+    cursor: none !important;
+  }
+}
+
+/* Monochrome Glass Cards & Panels */
+.mono-glass {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(36px) saturate(100%);
+  -webkit-backdrop-filter: blur(36px) saturate(100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.9), 
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.mono-pill {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.6), 
+              inset 0 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Custom delicate monochrome scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}

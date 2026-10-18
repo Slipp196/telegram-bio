@@ -1,0 +1,6 @@
+{
+  "name": "Aether Bio — Minimal Telegram & SoundCloud Profile",
+  "description": "Эстетичный темный био-сайт для Telegram и SoundCloud с интерактивными островками каналов, редактором в реальном времени и плавной органической анимацией.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

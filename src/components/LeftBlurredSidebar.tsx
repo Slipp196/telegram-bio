@@ -60,10 +60,6 @@ export const LeftBlurredSidebar: React.FC<LeftBlurredSidebarProps> = ({
           {/* Avatar & Quick Edit */}
           <div className="flex items-center justify-between">
             <div
-              onClick={onOpenEditor}
-              className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-neutral-900 border border-white/20 cursor-pointer group shadow-xl"
-              title="Нажмите, чтобы изменить аватарку или профиль"
-            >
               {profile.avatarUrl ? (
                 <img
                   src={profile.avatarUrl}
@@ -75,23 +71,8 @@ export const LeftBlurredSidebar: React.FC<LeftBlurredSidebarProps> = ({
                   <User className="w-9 h-9" />
                 </div>
               )}
-
-              {/* Hover Edit Overlay */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <Edit3 className="w-4 h-4 text-white" />
               </div>
             </div>
-
-            {/* Editor Trigger Button */}
-            <button
-              onClick={onOpenEditor}
-              className="p-2 rounded-xl bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 transition-all text-xs flex items-center gap-1.5 cursor-pointer"
-              title="Редактировать профиль"
-            >
-              <Edit3 className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Редактор</span>
-            </button>
-          </div>
 
           {/* Nickname & Username */}
           <div className="space-y-1">

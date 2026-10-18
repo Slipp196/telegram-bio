@@ -55,24 +55,24 @@ export const LeftBlurredSidebar: React.FC<LeftBlurredSidebarProps> = ({
           </button>
         </div>
 
-        {/* Profile Card Header (Avatar, Nick, User, Bio) */}
+{/* Profile Card Header (Avatar, Nick, User, Bio) */}
         <div className="space-y-4 pt-1">
-          {/* Avatar & Quick Edit */}
+          {/* Avatar */}
           <div className="flex items-center justify-between">
-            <div
+            <div className="relative w-18 h-18 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-neutral-900 border border-white/20 shadow-xl shrink-0">
               {profile.avatarUrl ? (
                 <img
                   src={profile.avatarUrl}
                   alt={profile.name}
-                  className="w-full h-full object-cover grayscale contrast-125 brightness-95 transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover grayscale contrast-125 brightness-95"
                 />
               ) : (
-                <div className="w-full h-full bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center text-white/50 group-hover:text-white transition-colors">
+                <div className="w-full h-full bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center text-white/50">
                   <User className="w-9 h-9" />
                 </div>
               )}
-              </div>
             </div>
+          </div>
 
           {/* Nickname & Username */}
           <div className="space-y-1">
